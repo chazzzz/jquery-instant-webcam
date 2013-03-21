@@ -17,7 +17,20 @@ Uhh, yeah. You should run it in the server for it to run properly
 How did you do it?
 ==
 
-In Actionscript
---
+I used 'External Interface' to call methods from jQuery/javascript and 'Base64Encoder' to encode the data.
 
-I used $External Interface$ class and  $Base64Encoder$ to encode the data
+
+Others
+==
+
+Can I decode it?
+--
+Of course! but I discourage it decoding in jQuery/javascript. It's fast if you decode it in the server
+
+Any other methods?
+--
+>     webcam.getCameraList() //returns a string array camera names
+
+
+
+
