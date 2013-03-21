@@ -29,7 +29,7 @@ Of course! but I discourage it decoding in jQuery/javascript. It's fast if you d
 
 Any other methods?
 --
->     webcam.getCameraList() //returns a string array camera names
+>     webcam.getCameraList() //returns a string array of available cameras' names in your machine
 
 
 
