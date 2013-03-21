@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Instant Webcam Demo</title>
+<script type="text/javascript" src="./resources/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./resources/js/jquery.webcam.js"></script>
+<style type="text/css">
+	.webcam, .img-wrapper{
+		display: inline-block;
+	}
+	.controls{
+		display: block;
+	}
+</style>
+</head>
+<body>
+<div id="webcam" class="webcam"></div>
+<div class="img-wrapper">
+	<img id="img" width = "400" height= "300" />
+</div>
+<div class="controls">
+	<button id="snap" onclick="webcam.snap()">Snap</button>
+	<button id="reset" onclick="webcam.reset()">Reset</button>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#webcam").webcam({
+			swf: './resources/swf/webcam.swf',
+	    	width: '400',
+	    	height: '300',
+	    	quality: '100',
+			save : function(image){
+				$("#img").attr('src', webcam.getImageData());
+			},
+			ready : function(){},
+			debug: true
+		});
+	});
+</script>
+</body>
+</html>
